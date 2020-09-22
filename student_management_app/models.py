@@ -35,7 +35,7 @@ class Staffs(models.Model):
 class Subjects(models.Model):
     id = models.AutoField(primary_key=True)
     subject_name = models.CharField(max_length=255)
-    course_id = models.ForeignKey(Courses,on_delete=models.CASCADE)
+    course_id = models.ForeignKey(Courses,on_delete=models.CASCADE,default=1)
     staff_id = models.ForeignKey(Staffs,on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
@@ -43,10 +43,13 @@ class Subjects(models.Model):
 
 class Students(models.Model):
     id = models.AutoField(primary_key=True)
+    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     gender = models.CharField(max_length=255)
     profile_pic = models.FileField()
     address = models.CharField(max_length=255)
     course_id = models.ForeignKey(Courses, on_delete=models.DO_NOTHING)
+    session_start_year=models.DateField()
+    session_end_year=models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     objects = models.Manager()
@@ -134,7 +137,7 @@ def create_user_profile(sender,instance,created,**kwargs):
             if instance.user_type == 2:
                 Staffs.objects.create(admin=instance)
             if instance.user_type == 3:
-                Students.objects.create(admin=instance)
+                Students.objects.create(admin=instance,course_id=Courses.objects.get(id=1),session_start_year="2020-01-01",session_end_year="2020-12-30",address="",profile_pic="",gender="")
 
 
 @receiver(post_save, sender=CustomUser)

@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
-from student_management_app.models import CustomUser, Staffs, Courses
+from student_management_app.models import CustomUser, Staffs, Courses, Subjects, Students
 
 
 def admin_home(request):
@@ -15,7 +15,7 @@ def add_staff(request):
 
 def add_staff_save(request):
     if request.method!="POST":
-        return HttpResponse("Method Not allowed")
+        return HttpResponse("<h2>Method Not allowed</h2>")
     else:
         first_name=request.POST.get("first_name")
         last_name=request.POST.get("last_name")
@@ -39,7 +39,7 @@ def add_course(request):
 def add_course_save(request):
 
     if request.method!="POST":
-        return HttpResponse("Method Not allowed")
+        return HttpResponse("<h2>Method Not allowed</h2>")
     else:
         course=request.POST.get("course")
 
@@ -52,14 +52,14 @@ def add_course_save(request):
             messages.error(request, "Failed to add course")
             return HttpResponseRedirect("/add_course")
 
-
 def add_student(request):
     courses=Courses.objects.all()
     return render(request,"hod_template/add_student_template.html",{"courses":courses})
 
+
 def add_student_save(request):
     if request.method!="POST":
-        return HttpResponse("Method Not allowed")
+        return HttpResponse("<h2>Method Not allowed</h2>")
     else:
         first_name=request.POST.get("first_name")
         last_name=request.POST.get("last_name")
@@ -90,3 +90,47 @@ def add_student_save(request):
         except:
             messages.error(request, "Failed to add student")
             return HttpResponseRedirect("/add_student")
+
+
+def add_subject(request):
+    courses=Courses.objects.all()
+    staffs=CustomUser.objects.filter(user_type=2)
+    return render(request,"hod_template/add_subject_template.html",{"staffs":staffs,"courses":courses})
+
+def add_subject_save(request):
+    if request.method!="POST":
+        return HttpResponse("<h2>Method Not allowed <h2>")
+    else:
+        subject_name=request.POST.get("subject_name")
+        course_id = request.POST.get("course")
+        course =Courses.objects.get(id=course_id)
+        staff_id = request.POST.get("staff")
+        staff = CustomUser.objects.get(id=staff_id)
+
+        try:
+            subject=Subjects(subject_name=subject_name,course_id=course,staff_id=staff)
+            subject.save()
+            messages.success(request,"Suceessufly added subject")
+            return HttpResponseRedirect("/add_subject")
+        except:
+            messages.error(request, "Failed to add subject")
+            return HttpResponseRedirect("/add_subject")
+
+
+def manage_staff(request):
+    staffs = Staffs.objects.all()
+    return render(request,"hod_template/manage_staff_template.html",{"staffs":staffs})
+
+def manage_student(request):
+    students = Students.objects.all()
+    return render(request,"hod_template/manage_student_template.html",{"students":students})
+
+
+def manage_course(request):
+    courses = Courses.objects.all()
+    return render(request,"hod_template/manage_course_template.html",{"courses":courses})
+
+
+def manage_subject(request):
+    subjects = Subjects.objects.all()
+    return render(request,"hod_template/manage_subject_template.html",{"subjects":subjects})

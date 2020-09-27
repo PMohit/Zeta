@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4f3d51f-41e9-4a3c-9d0f-722fe91771c5" name="Default Changelist" comment="added edit(student,staff)">
-      <change beforePath="$PROJECT_DIR$/cms/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/HodViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/HodViews.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/LoginCheckMiddleWare.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/LoginCheckMiddleWare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/migrations/0002_auto_20200922_1605.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/migrations/0003_auto_20200923_1000.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/templates/hod_template/form_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/hod_template/form_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_student_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_student_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/StaffViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/StaffViews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +21,7 @@
     <session id="-1178454640">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.21" value="1" />
@@ -39,32 +31,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="62" />
+          <entry key="html" value="66" />
           <entry key="js" value="2" />
           <entry key="png" value="1" />
-          <entry key="py" value="44" />
+          <entry key="py" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="62" />
+          <entry key="HTML" value="66" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="Python" value="44" />
+          <entry key="Python" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="4823" />
-          <entry key="py" value="9261" />
+          <entry key="html" value="6681" />
+          <entry key="py" value="10432" />
           <entry key="txt" value="270" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="4823" />
+          <entry key="HTML" value="6681" />
           <entry key="PLAIN_TEXT" value="270" />
-          <entry key="Python" value="9261" />
+          <entry key="Python" value="10432" />
         </counts>
       </usages-collector>
     </session>
@@ -74,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cms/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+            <state relative-caret-position="213">
+              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
               <folding>
                 <element signature="e#627#659#0" expanded="true" />
               </folding>
@@ -84,14 +76,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/forms.py">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="167">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="139" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student_management_app/StaffViews.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
-                <marker date="1601212063463" expanded="true" signature="129:158" ph="..." />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_subject_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#section#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="136" column="54" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -120,15 +141,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/form_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student_management_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -147,24 +159,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_student_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/home_content.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/student_management_app/HodViews.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="969">
@@ -181,10 +175,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/manage_session_template.html">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+            <state relative-caret-position="218">
+              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -239,10 +233,7 @@
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/base_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/add_student_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/edit_student_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/student_template/base_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/StaffViews.py" />
         <option value="$PROJECT_DIR$/student_management_app/StudentViews.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/student_template/student_home_template.html" />
@@ -251,13 +242,17 @@
         <option value="$PROJECT_DIR$/cms/settings.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_session_template.html" />
-        <option value="$PROJECT_DIR$/cms/urls.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/form_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/models.py" />
         <option value="$PROJECT_DIR$/student_management_app/forms.py" />
         <option value="$PROJECT_DIR$/student_management_app/LoginCheckMiddleWare.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_student_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/HodViews.py" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html" />
+        <option value="$PROJECT_DIR$/cms/urls.py" />
+        <option value="$PROJECT_DIR$/student_management_app/StaffViews.py" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html" />
       </list>
     </option>
   </component>
@@ -309,7 +304,7 @@
               <item name="CollegeManagementSystem" type="462c0819:PsiDirectoryNode" />
               <item name="student_management_app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="hod_template" type="462c0819:PsiDirectoryNode" />
+              <item name="staff_template" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -328,9 +323,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\staff_template" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\hod_template" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\student_template" />
-      <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\staff_template" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\static" />
     </key>
@@ -457,7 +452,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -472,7 +467,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19672132" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24262296" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -598,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_subject_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/manage_staff_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -692,20 +680,6 @@
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/footer.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/StaffViews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/StudentViews.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -713,13 +687,6 @@
           <folding>
             <marker date="1601202885943" expanded="true" signature="64:65" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -789,16 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
-          <folding>
-            <element signature="e#627#659#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -887,6 +844,57 @@
             <marker date="1601213088656" expanded="true" signature="5918:5921" ph="..." />
             <marker date="1601213088656" expanded="true" signature="10523:10806" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="139" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cms/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="e#627#659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_subject_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/StaffViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="136" column="54" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
         </state>
       </provider>
     </entry>

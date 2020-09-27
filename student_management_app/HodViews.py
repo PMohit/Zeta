@@ -1,9 +1,12 @@
 import datetime
 
 from django.contrib import messages
+from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
 
+from student_management_app.forms import AddStudentForm, EditStudentForm
 from student_management_app.models import CustomUser, Staffs, Courses, Subjects, Students
 
 
@@ -28,10 +31,10 @@ def add_staff_save(request):
             user.staffs.address=address
             user.save()
             messages.success(request,"Suceessufly added staff")
-            return HttpResponseRedirect("/add_staff")
+            return HttpResponseRedirect(reverse("add_staff"))
         except:
             messages.error(request, "Failed to add staff")
-            return HttpResponseRedirect("/add_staff")
+            return HttpResponseRedirect(reverse("add_staff"))
 
 def add_course(request):
     return render(request,"hod_template/add_course_template.html")
@@ -47,48 +50,57 @@ def add_course_save(request):
             course_model=Courses(course_name=course)
             course_model.save()
             messages.success(request,"Suceessufly added course")
-            return HttpResponseRedirect("/add_course")
+            return HttpResponseRedirect(reverse("add_course"))
         except:
             messages.error(request, "Failed to add course")
-            return HttpResponseRedirect("/add_course")
+            return HttpResponseRedirect(reverse("add_course"))
 
 def add_student(request):
-    courses=Courses.objects.all()
-    return render(request,"hod_template/add_student_template.html",{"courses":courses})
+    form=AddStudentForm()
+    return render(request,"hod_template/add_student_template.html",{"form":form})
 
 
 def add_student_save(request):
     if request.method!="POST":
         return HttpResponse("<h2>Method Not allowed</h2>")
     else:
-        first_name=request.POST.get("first_name")
-        last_name=request.POST.get("last_name")
-        username=request.POST.get("username")
-        email=request.POST.get("email")
-        password=request.POST.get("password")
-        address=request.POST.get("address")
-        session_start=request.POST.get("session_start")
-        session_end=request.POST.get("session_end")
-        course_id=request.POST.get("course")
-        gender=request.POST.get("gender")
+        form=AddStudentForm(request.POST,request.FILES)
+        if form.is_valid():
+            first_name=form.cleaned_data["first_name"]
+            last_name=form.cleaned_data["last_name"]
+            username=form.cleaned_data["username"]
+            email=form.cleaned_data["email"]
+            password=form.cleaned_data["password"]
+            address=form.cleaned_data["address"]
+            session_start=form.cleaned_data["session_start"]
+            session_end=form.cleaned_data["session_end"]
+            course_id=form.cleaned_data["course"]
+            gender=form.cleaned_data["gender"]
 
-        try:
-            user=CustomUser.objects.create_user(username=username,password=password,email=email,last_name=last_name,first_name=first_name,user_type=3)
-            user.students.address=address
-            course_obj=Courses.objects.get(id=course_id)
-            user.students.course_id = course_obj
+            # profile_pic = request.FILES['profile_pic']
+            # fs=FileSystemStorage()
+            # filename=fs.save(profile_pic.name,profile_pic)
+            # profile_pic_url=fs.url(filename)
 
-            user.students.session_start_year = session_start
-            user.students.session_end_year = session_end
-            user.students.gender = gender
-            user.students.profile_pic = ""
-            user.save()
-            messages.success(request,"Suceessufly added student")
-            return HttpResponseRedirect("/add_student")
-        except:
-            messages.error(request, "Failed to add student")
-            return HttpResponseRedirect("/add_student")
+            try:
+                user=CustomUser.objects.create_user(username=username,password=password,email=email,last_name=last_name,first_name=first_name,user_type=3)
+                user.students.address=address
+                course_obj=Courses.objects.get(id=course_id)
+                user.students.course_id = course_obj
 
+                user.students.session_start_year = session_start
+                user.students.session_end_year = session_end
+                user.students.gender = gender
+                user.students.profile_pic = " "
+                user.save()
+                messages.success(request,"Suceessufly added student")
+                return HttpResponseRedirect(reverse("add_student"))
+            except:
+                messages.error(request, "Failed to add student")
+                return HttpResponseRedirect(reverse("add_student"))
+        else:
+            form=AddStudentForm(request.POST)
+            return render(request, "hod_template/add_student_template.html", { "form": form})
 
 def add_subject(request):
     courses=Courses.objects.all()
@@ -109,10 +121,10 @@ def add_subject_save(request):
             subject=Subjects(subject_name=subject_name,course_id=course,staff_id=staff)
             subject.save()
             messages.success(request,"Suceessufly added subject")
-            return HttpResponseRedirect("/add_subject")
+            return HttpResponseRedirect(reverse("add_subject"))
         except:
             messages.error(request, "Failed to add subject")
-            return HttpResponseRedirect("/add_subject")
+            return HttpResponseRedirect(reverse("add_subject"))
 
 
 def manage_staff(request):
@@ -134,7 +146,7 @@ def manage_subject(request):
 
 def edit_staff(request,staff_id):
     staff = Staffs.objects.get(admin=staff_id)
-    return render(request, "hod_template/edit_staff_template.html", {"staff": staff})
+    return render(request, "hod_template/edit_staff_template.html", {"staff": staff,"id":staff_id})
 
 
 def edit_staff_save(request):
@@ -161,53 +173,139 @@ def edit_staff_save(request):
             staff_model.save()
 
             messages.success(request, "Suceessufly edited Staff Detials")
-            return HttpResponseRedirect("/edit_staff/"+staff_id)
+            return HttpResponseRedirect(reverse("edit_staff",staff_id))
         except:
             messages.error(request, "Failed edited Staff Detials")
-            return HttpResponseRedirect("/edit_staff/"+staff_id)
+            return HttpResponseRedirect(reverse("edit_staff",staff_id))
 
 
 def edit_student(request,student_id):
-    courses= Courses.objects.all()
+    request.session['student_id']=student_id
     student = Students.objects.get(admin=student_id)
-    return render(request, "hod_template/edit_student_template.html", {"student": student,"courses":courses})
+    form=EditStudentForm()
+    form.fields['email'].initial=student.admin.email
+    form.fields['first_name'].initial=student.admin.first_name
+    form.fields['last_name'].initial=student.admin.email
+    form.fields['username'].initial=student.admin.username
+    form.fields['address'].initial=student.address
+    form.fields['course'].initial=student.course_id.id
+    form.fields['gender'].initial=student.gender
+    form.fields['session_start'].initial=student.session_start_year
+    form.fields['session_end'].initial=student.session_end_year
+    return render(request, "hod_template/edit_student_template.html", {"form": form,"id":student_id,"username":student.admin.username})
 
 
 def edit_student_save(request):
     if request.method != "POST":
         return HttpResponse("<h2>Method Not allowed <h2>")
     else:
-        student_id = request.POST.get("student_id")
-        first_name = request.POST.get("first_name")
-        last_name = request.POST.get("last_name")
-        username = request.POST.get("username")
-        email = request.POST.get("email")
-        address = request.POST.get("address")
-        session_start = request.POST.get("session_start")
-        session_end = request.POST.get("session_end")
+        student_id = request.session.get("student_id")
+        if student_id == None:
+            return HttpResponseRedirect(reverse("manage_student"))
+        form=EditStudentForm(request.POST,request.FILES)
+        if form.is_valid():
+            first_name = form.cleaned_data["first_name"]
+            last_name = form.cleaned_data["last_name"]
+            username = form.cleaned_data["username"]
+            email = form.cleaned_data["email"]
+            address =form.cleaned_data["address"]
+            session_start =form.cleaned_data["session_start"]
+            session_end =form.cleaned_data["session_end"]
+            course_id =form.cleaned_data["course"]
+            gender = form.cleaned_data["gender"]
+
+            # if request.FILES['profile_pic']:
+            #     profile_pic = request.FILES['profile_pic']
+            #     fs=FileSystemStorage()
+            #     filename=fs.save(profile_pic.name,profile_pic)
+            #     profile_pic_url=fs.url(filename)
+            # else:
+            #     profile_pic_url=None
+
+
+            try:
+
+                user = CustomUser.objects.get(id=student_id)
+                user.first_name = first_name
+                user.last_name = last_name
+                user.email = email
+                user.username = username
+                user.save()
+
+                student= Students.objects.get(admin=student_id)
+                student.address=address
+                student.session_start_year = session_start
+                student.session_end_year = session_end
+                student.gender = gender
+
+                course=Courses.objects.get(id=course_id)
+                student.course_id=course
+                student.profile_pic = ''
+                # if profile_pic_url != None:
+                #         student.profile_pic=''
+                student.save()
+                del request.session['student_id']
+                messages.success(request, "Suceessufly edited Student Detials")
+                return HttpResponseRedirect(reverse("edit_student",kwargs={"student_id":student_id}))
+            except:
+                messages.error(request, "Failed edited Student Detials")
+                return HttpResponseRedirect("/edit_student/"+student_id)
+        else:
+            form = AddStudentForm(request.POST)
+            student = Students.objects.get(admin=student_id)
+            return render(request, "hod_template/edit_student_template.html", {"form": form,"id":student_id,"username":student.admin.username})
+
+
+def edit_subject(request,subject_id):
+    subject = Subjects.objects.get(id=subject_id)
+    courses = Courses.objects.all()
+    staffs = CustomUser.objects.filter(user_type=2)
+    return render(request, "hod_template/edit_subject_template.html", {"subject": subject,"courses":courses,"staffs":staffs,"id":subject_id})
+
+
+def edit_subject_save(request):
+    if request.method != "POST":
+        return HttpResponse("<h2>Method Not allowed <h2>")
+    else:
+        subject_id = request.POST.get("subject_id")
+        subject_name = request.POST.get("subject_name")
+        staff_id = request.POST.get("staff")
         course_id = request.POST.get("course")
-        gender = request.POST.get("gender")
+
         try:
-
-            user = CustomUser.objects.get(id=student_id)
-            user.first_name = first_name
-            user.last_name = last_name
-            user.email = email
-            user.username = username
-            user.save()
-
-            student= Students.objects.get(admin=student_id)
-            student.address=address
-            student.session_start_year = session_start
-            student.session_end_year = session_end
-            student.gender = gender
-
+            subject = Subjects.objects.get(id=subject_id)
+            subject.subject_name = subject_name
+            staff=CustomUser.objects.get(id=staff_id)
+            subject.staff_id=staff
             course=Courses.objects.get(id=course_id)
-            student.course_id=course
-            student.save()
+            subject.course_id=course
+            subject.save()
 
-            messages.success(request, "Suceessufly edited Student Detials")
-            return HttpResponseRedirect("/edit_student/"+student_id)
+            messages.success(request, "Suceessufly edited Subject")
+            return HttpResponseRedirect(reverse("edit_subject",subject_id))
         except:
-            messages.error(request, "Failed edited Student Detials")
-            return HttpResponseRedirect("/edit_student/"+student_id)
+            messages.error(request, "Failed edited Subject Detials")
+            return HttpResponseRedirect(reverse("edit_subject",subject_id))
+
+def edit_course(request,course_id):
+    course = Courses.objects.get(id=course_id)
+    return render(request, "hod_template/edit_course_template.html", {"course": course,"id":course_id})
+
+
+def edit_course_save(request):
+    if request.method != "POST":
+        return HttpResponse("<h2>Method Not allowed <h2>")
+    else:
+        course_id = request.POST.get("course_id")
+        course_name = request.POST.get("course")
+
+        try:
+            course = Courses.objects.get(id=course_id)
+            course.course_name=course_name
+            course.save()
+
+            messages.success(request, "Suceessufly edited Course Detials")
+            return HttpResponseRedirect(reverse("edit_course",course_id))
+        except:
+            messages.error(request, "Failed edited Course Detials")
+            return HttpResponseRedirect(reverse("edit_course",course_id))

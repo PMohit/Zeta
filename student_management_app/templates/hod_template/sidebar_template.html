@@ -43,7 +43,7 @@
                <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Staff
-                <i class="right fas fa-angle-left"></i>
+
               </p>
             </a>
            <li class="nav-item">
@@ -61,7 +61,7 @@
              <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Student
-                <i class="right fas fa-angle-left"></i>
+
               </p>
             </a>
            <li class="nav-item">
@@ -105,6 +105,17 @@
             </a>
           </li>
 
+         <li class="nav-item">
+          {%  url 'manage_session'  as manage_session %}
+           <a href="{'manage_session'}" class="nav-link {% if request.path == manage_session %} active {% endif %} ">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Manage Session Year
+
+              </p>
+            </a>
+          </li>
+
             <li class="nav-item">
             {%  url 'manage_subject'  as manage_subject %}
                 {%  url 'edit_subject' subject_id=id as edit_subject %}
@@ -112,7 +123,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Subject
-                
+
               </p>
             </a>
           </li>

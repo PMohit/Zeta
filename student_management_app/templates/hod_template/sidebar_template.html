@@ -48,12 +48,11 @@
             </a>
            <li class="nav-item">
               {%  url 'manage_staff'  as manage_staff %}
-                {%  url 'edit_staff' staff_id=id as edit_staff %}
-           <a href="{'manage_staff'}" class="nav-link {% if request.path == manage_staff %} active {% endif %} {% if request.path == edit_staff %} active {% endif %}">
+{#                {%  url 'edit_staff' staff_id=id as edit_staff %}#}
+           <a href="{'manage_staff'}" class="nav-link {% if request.path == manage_staff %} active {% endif %} ">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Staff
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -92,7 +91,6 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Course
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -102,7 +100,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Subject
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>
@@ -114,7 +112,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Subject
-                <span class="right badge badge-danger">New</span>
+                
               </p>
             </a>
           </li>

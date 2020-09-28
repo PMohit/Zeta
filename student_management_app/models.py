@@ -86,7 +86,7 @@ class LeaveReportStudent(models.Model):
     leave_status=models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
-    objecs = models.Manager()
+    objects = models.Manager()
 
 class LeaveReportStaff(models.Model):
     id = models.AutoField(primary_key=True)

@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
 from student_management_app.models import Subjects, SessionYearModel, Students, Attendance, AttendanceReport, Staffs, \
-    LeaveReportStaff, FeedBackStaffs
+    LeaveReportStaff, FeedBackStaffs, CustomUser
 
 
 def staff_home(request):
@@ -160,3 +160,38 @@ def staff_feedback_save(request):
         except:
             messages.error(request, "Failed To  Sent Feedback for leave")
             return HttpResponseRedirect(reverse("staff_feedback"))
+
+def staff_profile(request):
+    user= CustomUser.objects.get(id=request.user.id)
+    staff= Staffs.objects.get(admin=user)
+    return render(request, "staff_template/staff_profile.html",{"user":user,"staff":staff})
+
+def staff_profile_save(request):
+    if request.method!="POST":
+        return HttpResponseRedirect(reverse("staff_profile"))
+
+    else:
+
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        address = request.POST.get("address")
+        password = request.POST.get("password")
+
+        try:
+            customuser = CustomUser.objects.get(id=request.user.id)
+            customuser.first_name =first_name
+            customuser.last_name =last_name
+            if password!=None and password!="":
+                           customuser.set_password(password)
+            customuser.save()
+
+            staff=Staffs.objects.get(admin=customuser.id)
+            staff.address=address
+            staff.save()
+
+            messages.success(request, "Suceessufly updated Staff Profile")
+            return HttpResponseRedirect(reverse("staff_profile"))
+
+        except:
+             messages.error(request, "Failed to uddate Staff Profile")
+             return HttpResponseRedirect(reverse("staff_profile"))

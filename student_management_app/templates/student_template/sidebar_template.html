@@ -26,12 +26,12 @@
 
            {#  Add Staff  #}
           <li class="nav-item">
-              {%  url 'student_home'  as staff_home %}
-            <a href="{'student_home'}" class="nav-link {% if request.path == student_home %} active {% endif %}">
+              {%  url 'student_home'  as student_home %}
+            <a href="{{ student_home }}" class="nav-link {% if request.path == student_home %} active {% endif %}">
                <i class="nav-icon fas fa-th"></i>
                <p>
                    Home
-                <i class="right fas fa-angle-left"></i>
+
               </p>
             </a>
             

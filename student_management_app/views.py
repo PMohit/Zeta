@@ -29,7 +29,7 @@ def doLogin(request):
                      return HttpResponseRedirect(reverse("staff_home"))
                else:
                    return HttpResponseRedirect(reverse("student_home"))
-               # return HttpResponse("Email :" +request.POST.get("email")+" Password : "+request.POST.get("password"))
+
       else:
            messages.error(request,"Invalid Login Detials")
            return HttpResponseRedirect("/")

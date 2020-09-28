@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4f3d51f-41e9-4a3c-9d0f-722fe91771c5" name="Default Changelist" comment="">
+    <list default="true" id="b4f3d51f-41e9-4a3c-9d0f-722fe91771c5" name="Default Changelist" comment="added leave|feedback feature(staff)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/StaffViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/StaffViews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/StudentViews.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/StudentViews.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_management_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_management_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_management_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,32 +34,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="69" />
+          <entry key="html" value="97" />
           <entry key="js" value="2" />
           <entry key="png" value="1" />
-          <entry key="py" value="47" />
+          <entry key="py" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="69" />
+          <entry key="HTML" value="97" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="Python" value="47" />
+          <entry key="Python" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="8264" />
-          <entry key="py" value="11109" />
-          <entry key="txt" value="270" />
+          <entry key="html" value="10596" />
+          <entry key="py" value="12583" />
+          <entry key="txt" value="328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="8264" />
-          <entry key="PLAIN_TEXT" value="270" />
-          <entry key="Python" value="11109" />
+          <entry key="HTML" value="10596" />
+          <entry key="PLAIN_TEXT" value="328" />
+          <entry key="Python" value="12583" />
         </counts>
       </usages-collector>
     </session>
@@ -68,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cms/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+            <state relative-caret-position="562">
+              <caret line="73" column="117" selection-start-line="73" selection-start-column="117" selection-end-line="73" selection-end-column="117" />
               <folding>
                 <element signature="e#627#659#0" expanded="true" />
               </folding>
@@ -78,38 +79,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/StaffViews.py">
+        <entry file="file://$PROJECT_DIR$/student_management_app/StudentViews.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+            <state relative-caret-position="443">
+              <caret line="33" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="33" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
-                <marker date="1601270191899" expanded="true" signature="2806:2807" ph="..." />
-                <marker date="1601270191899" expanded="true" signature="3452:3453" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_update_attendance_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-              <folding>
-                <element signature="e#1748#1768#0#HTML" expanded="true" />
-                <element signature="e#2040#2061#0#HTML" expanded="true" />
-                <element signature="e#2212#2232#0#HTML" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/student_view_attendance_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="136" column="54" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
+            <state relative-caret-position="290">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/base_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/student_attendance_data.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -139,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/student_management_app/templates/hee.html" />
         <option value="$PROJECT_DIR$/student_management_app/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/student_management_app/admin.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/Login.html" />
@@ -155,7 +157,6 @@
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_staff_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_course_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_subject_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/footer.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/edit_staff_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/edit_course_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/edit_subject_template.html" />
@@ -164,12 +165,8 @@
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/base_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/add_student_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/edit_student_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/base_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/StudentViews.py" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/student_template/student_home_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_home_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/views.py" />
         <option value="$PROJECT_DIR$/cms/settings.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_session_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/form_template.html" />
@@ -177,14 +174,25 @@
         <option value="$PROJECT_DIR$/student_management_app/LoginCheckMiddleWare.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/manage_student_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/HodViews.py" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_update_attendance_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/footer.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/footer.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/footer.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/base_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/StaffViews.py" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_apply_leave.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_feedback_leave.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/views.py" />
+        <option value="$PROJECT_DIR$/cms/urls.py" />
         <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html" />
         <option value="$PROJECT_DIR$/student_management_app/models.py" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html" />
-        <option value="$PROJECT_DIR$/cms/urls.py" />
-        <option value="$PROJECT_DIR$/student_management_app/StaffViews.py" />
-        <option value="$PROJECT_DIR$/student_management_app/templates/staff_template/staff_update_attendance_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/StudentViews.py" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/student_view_attendance_template.html" />
+        <option value="$PROJECT_DIR$/student_management_app/templates/student_template/student_attendance_data.html" />
       </list>
     </option>
   </component>
@@ -239,6 +247,13 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="staff_template" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CollegeManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CollegeManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="student_management_app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="student_template" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -259,9 +274,9 @@
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\static\plugins" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\student_template" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\staff_template" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\hod_template" />
-      <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates\student_template" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\templates" />
       <recent name="D:\django_Workspacee\CollegeManagementSystem\student_management_app\static" />
     </key>
@@ -385,13 +400,52 @@
       <option name="project" value="LOCAL" />
       <updated>1601225886955</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added attendance update(student)">
+      <created>1601270764786</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601270764786</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added leave|feedback feature(staff)">
+      <created>1601284092288</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601284092288</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24357034" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="DB Execution Console" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24262296" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3295082" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="DB Browser" order="2" />
@@ -408,31 +462,6 @@
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24262296" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3295082" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="DB Browser" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.3295082" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="DB Execution Console" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19672132" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -459,20 +488,11 @@
     <MESSAGE value="added django forms(student,edit)" />
     <MESSAGE value="added HomePage(student,staff)| Page restrictions" />
     <MESSAGE value="added attendance template(student)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added attendance template(student)" />
+    <MESSAGE value="added attendance update(student)" />
+    <MESSAGE value="added leave|feedback feature(staff)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added leave|feedback feature(staff)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/student_management_app/static/dist/js/pages/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/static/dist/img/avatar3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/migrations/0002_auto_20200921_1750.py" />
-    <entry file="file://$PROJECT_DIR$/student_management_app/migrations/0003_auto_20200921_1806.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/db/models/manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -509,16 +529,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/content_header.html" />
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_course_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="44" column="84" selection-start-line="44" selection-start-column="84" selection-end-line="44" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#6;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/login_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -548,13 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="74" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -604,58 +607,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/footer.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/StudentViews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/base_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="29" column="89" selection-start-line="29" selection-start-column="89" selection-end-line="29" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/student_home_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_home_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1601204819752" expanded="true" signature="337:338" ph="..." />
-            <marker date="1601204819752" expanded="true" signature="337:339" ph="..." />
-            <marker date="1601204819752" expanded="true" signature="474:1289" ph="..." />
-            <marker date="1601204819752" expanded="true" signature="1318:1320" ph="..." />
-            <marker date="1601204819752" expanded="true" signature="1318:1322" ph="..." />
-            <marker date="1601204819752" expanded="true" signature="1318:1323" ph="..." />
-            <marker date="1601204819752" expanded="true" signature="1522:1526" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,22 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="138" selection-start-line="138" selection-end-line="139" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_subject_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#div#0;n#div#0;n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/LoginCheckMiddleWare.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -746,8 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/HodViews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="189" column="58" selection-start-line="189" selection-start-column="58" selection-end-line="189" selection-end-column="58" />
+        <state relative-caret-position="381">
+          <caret line="179" column="71" lean-forward="true" selection-start-line="175" selection-start-column="10" selection-end-line="179" selection-end-column="71" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <marker date="1601213088656" expanded="true" signature="1614:1620" ph="..." />
@@ -758,74 +697,189 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/models.py">
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_course_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-            <marker date="1601262906593" expanded="true" signature="425:564" ph="..." />
-            <marker date="1601262906593" expanded="true" signature="593:598" ph="..." />
-            <marker date="1601262906593" expanded="true" signature="593:2879" ph="..." />
-            <marker date="1601262906593" expanded="true" signature="5765:5766" ph="..." />
-            <marker date="1601262906593" expanded="true" signature="5765:5767" ph="..." />
-            <marker date="1601262906593" expanded="true" signature="5765:5774" ph="..." />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/sidebar_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/hod_template/add_subject_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="72" column="14" lean-forward="true" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/base_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/sidebar_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="153">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html">
+    <entry file="file://$PROJECT_DIR$/student_management_app/StaffViews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="136" column="54" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
+        <state relative-caret-position="443">
+          <caret line="144" column="68" selection-start-line="144" selection-start-column="68" selection-end-line="144" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1601283359834" expanded="true" signature="2944:2945" ph="..." />
+            <marker date="1601283359834" expanded="true" signature="3590:3591" ph="..." />
+            <marker date="1601283359834" expanded="true" signature="4987:5082" ph="..." />
+            <marker date="1601283359834" expanded="true" signature="6011:6012" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_apply_leave.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1601285458587" expanded="true" signature="337:338" ph="..." />
+            <marker date="1601285458587" expanded="true" signature="337:339" ph="..." />
+            <marker date="1601285458587" expanded="true" signature="474:1171" ph="..." />
+            <marker date="1601285458587" expanded="true" signature="1200:1202" ph="..." />
+            <marker date="1601285458587" expanded="true" signature="1200:1204" ph="..." />
+            <marker date="1601285458587" expanded="true" signature="1200:1205" ph="..." />
+            <marker date="1601285458587" expanded="true" signature="1404:1408" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_feedback_leave.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cms/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+        <state relative-caret-position="562">
+          <caret line="73" column="117" selection-start-line="73" selection-start-column="117" selection-end-line="73" selection-end-column="117" />
           <folding>
             <element signature="e#627#659#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student_management_app/StaffViews.py">
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/student_home_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-            <marker date="1601270191899" expanded="true" signature="2806:2807" ph="..." />
-            <marker date="1601270191899" expanded="true" signature="3452:3453" ph="..." />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/sidebar_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_update_attendance_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="788">
           <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
           <folding>
-            <element signature="e#1748#1768#0#HTML" expanded="true" />
-            <element signature="e#2040#2061#0#HTML" expanded="true" />
-            <element signature="e#2212#2232#0#HTML" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
+            <marker date="1601286630620" expanded="true" signature="425:564" ph="..." />
+            <marker date="1601286630620" expanded="true" signature="593:598" ph="..." />
+            <marker date="1601286630620" expanded="true" signature="593:2862" ph="..." />
+            <marker date="1601286630620" expanded="true" signature="5744:5745" ph="..." />
+            <marker date="1601286630620" expanded="true" signature="5744:5746" ph="..." />
+            <marker date="1601286630620" expanded="true" signature="5744:5753" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/staff_template/staff_take_attendance_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/StudentViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="33" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/student_view_attendance_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/base_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_management_app/templates/student_template/student_attendance_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>

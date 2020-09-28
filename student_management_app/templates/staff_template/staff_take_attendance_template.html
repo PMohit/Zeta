@@ -18,6 +18,7 @@ Take attendance
               <!-- form start -->
 
                 <div class="card-body">
+                {% csrf_token %}
                    <div class="form-group">
                     <label >Subject</label>
                     <select class="form-control" name="subject" id="subject">

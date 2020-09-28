@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.postgres import serializers
-from django.core.serializers import json
+import json
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse

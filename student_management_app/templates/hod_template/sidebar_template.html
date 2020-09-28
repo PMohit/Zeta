@@ -46,6 +46,8 @@
 
               </p>
             </a>
+          </li>
+
            <li class="nav-item">
               {%  url 'manage_staff'  as manage_staff %}
 {#                {%  url 'edit_staff' staff_id=id as edit_staff %}#}
@@ -56,6 +58,7 @@
               </p>
             </a>
           </li>
+
             <li class="nav-item ">
             <a href="{%  url 'add_student' %} " class="nav-link ">
              <i class="nav-icon fas fa-th"></i>
@@ -64,6 +67,8 @@
 
               </p>
             </a>
+            </li>
+
            <li class="nav-item">
                 {%  url 'manage_student'  as manage_student %}
                 {%  url 'edit_student' student_id=id as edit_student %}
@@ -71,20 +76,22 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Student
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>
-               <li class="nav-item">
+
+            <li class="nav-item">
             <a href="{%  url 'add_course' %}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Course
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>
-               <li class="nav-item">
+
+            <li class="nav-item">
             {%  url 'manage_course'  as manage_course %}
                 {%  url 'edit_course' course_id=id as edit_course %}
            <a href="{'manage_course'}" class="nav-link {% if request.path == manage_course %} active {% endif %} {% if request.path == edit_course %} active {% endif %}">
@@ -115,7 +122,6 @@
               </p>
             </a>
           </li>
-
             <li class="nav-item">
             {%  url 'manage_subject'  as manage_subject %}
                 {%  url 'edit_subject' subject_id=id as edit_subject %}
@@ -133,7 +139,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Student Feedback
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>
@@ -143,7 +149,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                   View Attendance
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>
@@ -153,7 +159,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Staff Feedback
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>
@@ -163,7 +169,7 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Student Leave
-                <span class="right badge badge-danger">New</span>
+
               </p>
             </a>
           </li>

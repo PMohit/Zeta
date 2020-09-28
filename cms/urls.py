@@ -55,6 +55,10 @@ urlpatterns = [
     path('add_session_save', HodViews.add_session_save,name="add_session_save"),
     path('check_email_exits', HodViews.check_email_exits,name="check_email_exits"),
     path('check_username_exits', HodViews.check_username_exits,name="check_username_exits"),
+    path('student_feedback_message', HodViews.student_feedback_message,name="student_feedback_message"),
+    path('student_feedback_message_replied', HodViews.student_feedback_message_replied,name="student_feedback_message_replied"),
+    path('staff_feedback_message', HodViews.staff_feedback_message,name="staff_feedback_message"),
+    path('staff_feedback_message_replied', HodViews.staff_feedback_message_replied,name="staff_feedback_message_replied"),
 
     #Staff Url Path
     path('staff_home', StaffViews.staff_home,name="staff_home"),
@@ -79,4 +83,4 @@ urlpatterns = [
     path('student_feedback', StudentViews.student_feedback, name="student_feedback"),
     path('student_feedback_save', StudentViews.student_feedback_save, name="student_feedback_save"),
 
-              ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

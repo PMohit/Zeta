@@ -39,8 +39,8 @@ def student_view_attendance_post(request):
     return render(request, "student_template/student_attendance_data.html",{"attendance_reports":attendance_reports})
 
 def student_apply_leave(request):
-    student_obj = Students.objects.get(admin=request.user.id)
-    leave_data=LeaveReportStudent.objects.filter(student_id=student_obj)
+    student = Students.objects.get(admin=request.user.id)
+    leave_data=LeaveReportStudent.objects.filter(student_id=student)
     return render(request, "student_template/student_apply_leave.html",{"leave_data":leave_data})
 
 

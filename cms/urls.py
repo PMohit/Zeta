@@ -81,6 +81,8 @@ urlpatterns = [
     path('staff_feedback_save', StaffViews.staff_feedback_save,name="staff_feedback_save"),
     path('staff_profile', StaffViews.staff_profile, name="staff_profile"),
     path('staff_profile_save', StaffViews.staff_profile_save, name="staff_profile_save"),
+    path('staff_add_result', StaffViews.staff_add_result, name="staff_add_result"),
+    path('staff_add_result_save', StaffViews.staff_add_result_save, name="staff_add_result_save"),
 
     path('get_students', StaffViews.get_students,name="get_students"),
     path('get_attendance_dates', StaffViews.get_attendance_dates,name="get_attendance_dates"),

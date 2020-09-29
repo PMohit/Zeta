@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
 from student_management_app.models import Subjects, SessionYearModel, Students, Attendance, AttendanceReport, Staffs, \
-    LeaveReportStaff, FeedBackStaffs, CustomUser, Courses
+    LeaveReportStaff, FeedBackStaffs, CustomUser, Courses, StudentsResult
 
 
 def staff_home(request):
@@ -248,3 +248,40 @@ def staff_profile_save(request):
         except:
              messages.error(request, "Failed to uddate Staff Profile")
              return HttpResponseRedirect(reverse("staff_profile"))
+
+def staff_add_result(request):
+    subjects = Subjects.objects.filter(staff_id=request.user.id)
+    session_years = SessionYearModel.objects.all()
+    return render(request, "staff_template/staff_add_result.html",{"subjects":subjects,"session_years":session_years})
+
+def staff_add_result_save(request):
+    if request.method != "POST":
+        return HttpResponseRedirect(reverse("staff_add_result"))
+
+    student_admin_id =request.POST.get('student_list')
+    assignment_marks =request.POST.get('assignment_marks')
+    exam_marks =request.POST.get('exam_marks')
+    subject_id =request.POST.get('subject_id')
+
+    student_obj = Students.objects.get(admin=student_admin_id)
+    subject_obj = Subjects.objects.get(id=subject_id)
+
+    try:
+        check_exists=StudentsResult.objects.filter(subject_id=subject_obj,student_id=subject_obj).exists()
+        if check_exists:
+            result=StudentsResult.objects.get(subject_id=subject_obj,student_id=subject_obj)
+            result.subject_assignment_marks=assignment_marks
+            result.subject_exam_marks=exam_marks
+            result.save()
+            messages.success(request, "Suceessufly Updated Student Result")
+            return HttpResponseRedirect(reverse("staff_add_result"))
+        else:
+            result=StudentsResult(student_id=student_obj,subject_id=student_obj,
+                                  subject_exam_marks=exam_marks,subject_assignment_marks=assignment_marks)
+            result.save()
+
+            messages.success(request, "Suceessufly added Student Result")
+            return HttpResponseRedirect(reverse("staff_add_result"))
+    except:
+        messages.error(request, "Failed to add Student Result")
+        return HttpResponseRedirect(reverse("staff_add_result"))

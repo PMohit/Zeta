@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from student_management_app.models import Courses, Students, Subjects, CustomUser, Attendance, AttendanceReport, \
-    LeaveReportStudent, FeedBackStudent
+    LeaveReportStudent, FeedBackStudent, StudentsResult
 
 
 def student_home(request):
@@ -142,3 +142,8 @@ def student_profile_save(request):
         except:
              messages.error(request, "Failed to uddate Student Profile")
              return HttpResponseRedirect(reverse("student_profile"))
+
+def student_view_result(request):
+    student= Students.objects.get(admin=request.user.id)
+    studentresult = StudentsResult.objects.filter(student_id=student.id)
+    return render(request, "student_template/student_result.html",{"studentresult":studentresult})

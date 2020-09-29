@@ -25,7 +25,7 @@
     <div class="card-body">
       <p class="login-box-msg">Sign in to Student Management System</p>
 
-      <form action="/doLogin" method="post">
+      <form action="/doLogin" method="post" id="demo-form">
           {% csrf_token %}
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" name="email">
